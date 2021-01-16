@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<skin>
+   <information>
+      <name>베이스캠프</name>
+      <version>1.0.0-rc1</version>
+      <description>
+         <![CDATA[웹표준을 준수한 HTML5 기반의 Tistory 기본 스킨입니다.]]>
+      </description>
+      <license>
+         <![CDATA[자유롭게 수정이 가능하며, 저작권 표시하에 재배포 가능합니다.]]>
+      </license>
+   </information>
+   <author>
+      <name>박경두</name>
+      <homepage>webruden.tistory.com</homepage>
+      <email>ruden91@naver.com</email>
+   </author>
+   <variables>
+      <variablegroup>   
+         <variable>
+            <name>copyright</name>
+            <label><![CDATA[ 저작권 ]]></label>
+            <description></description>
+            <type>STRING</type>
+            <default>베이스캠프</default>
+         </variable>       
+         <!-- <variable>
+         <name>theme</name>
+         <label>테마</label>
+         <description><![CDATA[ 블로그 테마 ]]></description>
+         <type>SELECT</type>
+         <option><![CDATA[
+            [
+               { "name": "light", "label": "라이트 모드", "value": "light" },
+               { "name": "dark", "label": "다크 모드", "value": "dark" }
+            ]
+         ]]></option>
+         <default>light</default>
+         </variable>       -->
+         <variable>
+            <name>logo-image</name>
+            <label><![CDATA[ 로고 이미지 ]]></label>
+            <description></description>
+            <type>IMAGE</type>
+            <default></default>
+         </variable>      
+         <variable>
+            <name>primary-color</name>
+            <label><![CDATA[ 브랜드 컬러 ]]></label>
+            <description></description>
+            <type>COLOR</type>
+            <default><![CDATA[#3b3e79]]></default>
+         </variable>      
+         <variable>
+            <name>enabled-backtop</name>
+            <label>맨 위로 가기 버튼</label>
+            <description></description>
+            <type>BOOL</type>
+            <default>true</default>
+         </variable>         
+         <!-- <variable>
+            <name>enabled-darkmode</name>
+            <label>다크모드</label>
+            <description></description>
+            <type>BOOL</type>
+            <default>false</default>
+         </variable>          -->
+      </variablegroup>
+      <variablegroup>        
+         <variable>
+            <name>enabled-profile</name>
+            <label>프로필</label>
+            <description></description>
+            <type>BOOL</type>
+            <default>true</default>
+         </variable>         
+         <variable>
+            <name>enabled-counter</name>
+            <label>방문자수</label>
+            <description></description>
+            <type>BOOL</type>
+            <default>true</default>
+         </variable>         
+      </variablegroup>
+      <!-- <variablegroup name="토스트 메시지">        
+         <!-- <variable>
+            <name>toast-msg-copy</name>
+            <label>복사</label>
+            <description></description>
+            <type>STRING</type>
+            <default>포스팅 주소를 복사했습니다 📄</default>
+         </variable>         -->
+         <variable>
+            <name>toast-msg-post-like</name>
+            <label>공감</label>
+            <description></description>
+            <type>STRING</type>
+            <default>소중한 공감 하나 감사합니다 💖</default>
+         </variable>        
+         <variable>
+            <name>toast-msg-post-end</name>
+            <label>포스트 엔딩</label>
+            <description></description>
+            <type>STRING</type>
+            <default>유익하셨다면 공감 하나 부탁드릴게요! ✨</default>
+         </variable>        
+      </variablegroup>                   -->
+      <variablegroup name="본문 커스텀 애드센스">        
+         <variable>
+            <name>enabled-custom-ads</name>
+            <label>활성화</label>
+            <description></description>
+            <type>BOOL</type>
+            <default>false</default>
+         </variable>         
+         <variable>
+            <name>ads-client</name>
+            <label>클라이언트</label>
+            <description></description>
+            <type>STRING</type>
+            <default></default>
+         </variable>         
+         <variable>
+            <name>ads-slot</name>
+            <label>슬롯</label>
+            <description></description>
+            <type>STRING</type>
+            <default></default>
+         </variable>         
+      </variablegroup>      
+   </variables>   
+</skin>
