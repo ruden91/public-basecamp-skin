@@ -83,13 +83,13 @@
          </variable>         
       </variablegroup>
       <!-- <variablegroup name="토스트 메시지">        
-         <!-- <variable>
+         <variable>
             <name>toast-msg-copy</name>
             <label>복사</label>
             <description></description>
             <type>STRING</type>
             <default>포스팅 주소를 복사했습니다 📄</default>
-         </variable>         -->
+         </variable>        
          <variable>
             <name>toast-msg-post-like</name>
             <label>공감</label>
