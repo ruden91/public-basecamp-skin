@@ -194,6 +194,23 @@ body.prevent-body-scrolling {
 .bc-markdown__inner-content .tt_article_useless_p_margin ul {
   margin-bottom: 30px!important
 }
+.bc-markdown__inner-content .tt_article_useless_p_margin .og-host {
+  margin-bottom: 0!important
+}
+.bc-markdown__inner-content .tt_article_useless_p_margin table {
+  overflow-x: scroll;
+  border: none;
+  table-layout: fixed
+}
+.bc-markdown__inner-content .tt_article_useless_p_margin table tbody tr:nth-child(2n) {
+  background-color: #f8f9fa
+}
+.bc-markdown__inner-content .tt_article_useless_p_margin table tbody td {
+  font-size: 13px;
+  text-align: center;
+  padding: 12px;
+  word-break: break-word
+}
 .bc-markdown__inner-content .tt_article_useless_p_margin ol,
 .bc-markdown__inner-content .tt_article_useless_p_margin ul {
   margin-left: 20px
@@ -212,7 +229,7 @@ body.prevent-body-scrolling {
 .bc-markdown__inner-content .tt_article_useless_p_margin a {
   color: var(--primary-color);
   text-decoration: underline;
-  font-weight: 400
+  font-weight: 700
 }
 .bc-markdown .another_category {
   margin-top: 30px;
@@ -225,12 +242,18 @@ body.prevent-body-scrolling {
   padding-right: 12px
 }
 .bc-markdown .another_category h4 {
-  font-size: 1em;
+  font-size: 1em!important;
   border: none;
   margin-bottom: 0!important
 }
+.bc-markdown .another_category h4 a {
+  text-decoration: none!important
+}
 .bc-markdown .another_category table {
   margin-bottom: 0!important
+}
+.bc-markdown .another_category table a {
+  text-decoration: none
 }
 .bc-markdown .another_category table tbody {
   border-bottom: none
@@ -424,7 +447,7 @@ body.prevent-body-scrolling {
   margin-bottom: 30px
 }
 .related-articles h2 {
-  font-size: 1em;
+  font-size: 1.25em;
   font-weight: 500;
   margin-bottom: 15px!important
 }
@@ -432,10 +455,6 @@ body.prevent-body-scrolling {
   color: var(--primary-color)
 }
 .related-articles ul {
-  margin-left: -34px;
-  margin-right: -34px;
-  padding-left: 34px;
-  padding-right: 34px;
   overflow-x: auto;
   white-space: nowrap
 }
@@ -533,7 +552,7 @@ body.prevent-body-scrolling {
   padding-right: 12px
 }
 .comment-holder h2 {
-  font-size: 1em;
+  font-size: 1.25em;
   font-weight: 500;
   margin-bottom: 15px!important
 }
