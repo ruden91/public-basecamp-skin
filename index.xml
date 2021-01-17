@@ -128,5 +128,21 @@
             <default></default>
          </variable>         
       </variablegroup>      
+      <variablegroup name="구글 태그 매니저">        
+         <variable>
+            <name>enabled-gtm</name>
+            <label>활성화</label>
+            <description></description>
+            <type>BOOL</type>
+            <default>false</default>
+         </variable>         
+         <variable>
+            <name>gtm-id</name>
+            <label>GTM 코드</label>
+            <description></description>
+            <type>STRING</type>
+            <default></default>
+         </variable>                 
+      </variablegroup>      
    </variables>   
 </skin>
