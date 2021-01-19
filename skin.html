@@ -249,54 +249,56 @@
                     </s_tag_rep>
                   </ul>
                 </s_tag>
-                <div class="comment-holder">
-                  <s_guest>
-                    <div class="guest-holder">
-                      <s_guest_input_form>
-                        <div class="bc-comment-form"><textarea name="[##_guest_textarea_body_##]" cols="" rows="4" placeholder="여러분의 소중한 글을 입력해주세요 :)"></textarea>
-                          <div class="submit-holder">
-                            <s_guest_member>
-                              <s_guest_form>
-                                <p class="name-input"><input type="text" name="[##_guest_input_name_##]" value="[##_guest_name_##]" placeholder="이름"></p>
-                                <p class="password-input"><input type="password" name="[##_guest_input_password_##]" value="[##_guest_password_##]" placeholder="암호"></p>
-                              </s_guest_form>
-                            </s_guest_member>
-                            <div class="bc-comment-form-footer"><button class="btn" type="submit" onclick="[##_guest_onclick_submit_##]">안부남기기</button></div>
+                <div class="guest-page">
+                  <div class="comment-holder">
+                    <s_guest>
+                      <div class="guest-holder">
+                        <s_guest_input_form>
+                          <div class="bc-comment-form"><textarea name="[##_guest_textarea_body_##]" cols="" rows="4" placeholder="여러분의 소중한 글을 입력해주세요 :)"></textarea>
+                            <div class="submit-holder">
+                              <s_guest_member>
+                                <s_guest_form>
+                                  <p class="name-input"><input type="text" name="[##_guest_input_name_##]" value="[##_guest_name_##]" placeholder="이름"></p>
+                                  <p class="password-input"><input type="password" name="[##_guest_input_password_##]" value="[##_guest_password_##]" placeholder="암호"></p>
+                                </s_guest_form>
+                              </s_guest_member>
+                              <div class="bc-comment-form-footer"><button class="btn" type="submit" onclick="[##_guest_onclick_submit_##]">안부남기기</button></div>
+                            </div>
                           </div>
-                        </div>
-                      </s_guest_input_form>
-                    </div>
-                    <s_guest_container>
-                      <div class="comment-list">
-                        <ul>
-                          <s_guest_rep>
-                            <li class="comment-item" id="[##_guest_rep_id_##]">
-                              <div class="author-meta"><img class="avatar" src="//t1.daumcdn.net/tistory_admin/static/skin/avatar_default.gif" alt="">
-                                <div class="info"><span class="name">[##_guest_rep_name_##]</span><span class="date">[##_guest_rep_date_##]</span></div>
-                              </div>
-                              <p>[##_guest_rep_desc_##]</p>
-                              <div class="control"><a href="#" onclick="[##_guest_rep_onclick_delete_##]">수정/삭제</a><a href="#" onclick="[##_guest_rep_onclick_reply_##]">댓글쓰기</a></div>
-                              <s_guest_reply_container>
-                                <div class="reply-comment-holder">
-                                  <ul>
-                                    <s_guest_reply_rep>
-                                      <li id="[##_guest_rep_id_##]">
-                                        <div class="author-meta"><img class="avatar" src="//t1.daumcdn.net/tistory_admin/static/skin/avatar_default.gif" alt="">
-                                          <div class="info"><span class="name">[##_guest_rep_name_##]</span><span class="date">[##_guest_rep_date_##]</span></div>
-                                        </div>
-                                        <p>[##_guest_rep_desc_##]</p>
-                                        <div class="control"><a href="#" onclick="[##_guest_rep_onclick_delete_##]">수정/삭제</a></div>
-                                      </li>
-                                    </s_guest_reply_rep>
-                                  </ul>
-                                </div>
-                              </s_guest_reply_container>
-                            </li>
-                          </s_guest_rep>
-                        </ul>
+                        </s_guest_input_form>
                       </div>
-                    </s_guest_container>
-                  </s_guest>
+                      <s_guest_container>
+                        <div class="comment-list">
+                          <ul>
+                            <s_guest_rep>
+                              <li class="comment-item" id="[##_guest_rep_id_##]">
+                                <div class="author-meta"><img class="avatar" src="//t1.daumcdn.net/tistory_admin/static/skin/avatar_default.gif" alt="">
+                                  <div class="info"><span class="name">[##_guest_rep_name_##]</span><span class="date">[##_guest_rep_date_##]</span></div>
+                                </div>
+                                <p>[##_guest_rep_desc_##]</p>
+                                <div class="control"><a href="#" onclick="[##_guest_rep_onclick_delete_##]">수정/삭제</a><a href="#" onclick="[##_guest_rep_onclick_reply_##]">댓글쓰기</a></div>
+                                <s_guest_reply_container>
+                                  <div class="reply-comment-holder">
+                                    <ul>
+                                      <s_guest_reply_rep>
+                                        <li id="[##_guest_rep_id_##]">
+                                          <div class="author-meta"><img class="avatar" src="//t1.daumcdn.net/tistory_admin/static/skin/avatar_default.gif" alt="">
+                                            <div class="info"><span class="name">[##_guest_rep_name_##]</span><span class="date">[##_guest_rep_date_##]</span></div>
+                                          </div>
+                                          <p>[##_guest_rep_desc_##]</p>
+                                          <div class="control"><a href="#" onclick="[##_guest_rep_onclick_delete_##]">수정/삭제</a></div>
+                                        </li>
+                                      </s_guest_reply_rep>
+                                    </ul>
+                                  </div>
+                                </s_guest_reply_container>
+                              </li>
+                            </s_guest_rep>
+                          </ul>
+                        </div>
+                      </s_guest_container>
+                    </s_guest>
+                  </div>
                 </div>
                 <s_paging>
                   <div class="pagination"><a class="prev [##_no_more_prev_##]" [##_prev_page_##]=""></a>
@@ -404,23 +406,45 @@
         <div id="side-menu">
           <div class="dim"></div>
           <div class="panel">
-            <header><a class="close-btn"><img src="./images/close_icon.svg" alt="닫기 아이콘"></a></header>
-            <div class="panel__content">
-              <div class="profile">
+            <div class="panel__inner">
+              <header><a class="close-btn"><img src="./images/close_icon.svg" alt="닫기 아이콘"></a></header>
+              <div class="panel__content">
                 <s_if_var_enabled-profile>
-                  <div class="profile-info">[##_blog_image_##]<p class="blogger">[##_blogger_##]</p>
-                    <p class="desc">[##_desc_##]</p>
+                  <div class="side-profile">
+                    <div class="side-profile__bg">
+                      <s_if_var_profile-bg-image><img src="[##_var_profile-bg-image_##]" alt="사이드 프로필 배경이미지"></s_if_var_profile-bg-image>
+                      <s_not_var_profile-bg-image><img src="./images/profile_default_image.jpg" alt="사이드 프로필 배경이미지"></s_not_var_profile-bg-image>
+                    </div>
+                    <div class="side-profile__info">
+                      <s_if_var_profile-avatar><img src="[##_var_profile-avatar_##]" alt="아바타 이미지"></s_if_var_profile-avatar>
+                      <s_not_var_profile-avatar>[##_blog_image_##]</s_not_var_profile-avatar>
+                      <p class="title">
+                        <s_if_var_profile-title>[##_var_profile-title_##]</s_if_var_profile-title>
+                        <s_not_var_profile-title>[##_blogger_##]</s_not_var_profile-title>
+                      </p>
+                      <s_if_var_profile-sub-title>
+                        <p class="sub-title">[##_var_profile-sub-title_##]</p>
+                      </s_if_var_profile-sub-title>
+                      <p class="desc">[##_desc_##]</p>
+                    </div>
                   </div>
                 </s_if_var_enabled-profile>
-                <s_if_var_enabled-counter>
-                  <div class="counter">
-                    <p class="total"><span>전체 방문자</span><span>[##_count_total_##]</span></p>
-                    <p class="today"><span>오늘</span><span>[##_count_today_##]</span></p>
-                    <p class="yesterday"><span>어제</span><span>[##_count_yesterday_##]</span></p>
+                <div class="category-list">[##_category_list_##]</div>
+                <div class="side-menu-footer">
+                  <div class="side-menu-footer__left">
+                    <s_if_var_enabled-counter>
+                      <div class="counter">
+                        <p class="total"><span>전체</span><span>[##_count_total_##]</span></p>
+                        <p class="today"><span>오늘</span><span>[##_count_today_##]</span></p>
+                        <p class="yesterday"><span>어제</span><span>[##_count_yesterday_##]</span></p>
+                      </div>
+                    </s_if_var_enabled-counter>
                   </div>
-                </s_if_var_enabled-counter>
+                  <div class="side-menu-footer__right">
+                    <address class="designed-by"><a href="https://webruden.tistory.com" target="_blank">Designed by <b data-copyright="bc">베이스캠프</b></a></address>
+                  </div>
+                </div>
               </div>
-              <div class="category-list">[##_category_list_##]</div>
             </div>
           </div>
         </div>
@@ -429,7 +453,7 @@
         </div>
       </div>
     </s_t3>
-    <script type="text/javascript" src="./images/app.e624b075e8b53fb09e5c.js"></script>
+    <script type="text/javascript" src="./images/app.b4c84376a09abfbe50ce.js"></script>
     <s_if_var_enabled-custom-ads>
       <script>
         (function() {
@@ -438,6 +462,6 @@
         })();
       </script>
     </s_if_var_enabled-custom-ads>
-    <script type="text/javascript" src="./images/script.2Q15UNbIjtygkQn1wXZF.js"></script>
+    <script type="text/javascript" src="./images/script.TVvJoravIwdnZF4cuAYz.js"></script>
   </body>
 </html>

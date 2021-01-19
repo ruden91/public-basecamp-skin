@@ -66,13 +66,41 @@
             <default>false</default>
          </variable>          -->
       </variablegroup>
-      <variablegroup>        
+      <variablegroup name="프로필">        
          <variable>
             <name>enabled-profile</name>
-            <label>프로필</label>
+            <label>사용유무</label>
             <description></description>
             <type>BOOL</type>
             <default>true</default>
+         </variable>         
+         <variable>
+            <name>profile-bg-image</name>
+            <label>배경 이미지</label>
+            <description></description>
+            <type>IMAGE</type>
+            <default></default>
+         </variable>         
+         <variable>
+            <name>profile-avatar</name>
+            <label>아바타</label>
+            <description></description>
+            <type>IMAGE</type>
+            <default></default>
+         </variable>         
+         <variable>
+            <name>profile-title</name>
+            <label>타이틀</label>
+            <description></description>
+            <type>STRING</type>
+            <default></default>
+         </variable>         
+         <variable>
+            <name>profile-sub-title</name>
+            <label>서브 타이틀</label>
+            <description></description>
+            <type>STRING</type>
+            <default></default>
          </variable>         
          <variable>
             <name>enabled-counter</name>

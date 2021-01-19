@@ -743,6 +743,9 @@ body.prevent-body-scrolling {
 ul.tags li {
   display: inline-block
 }
+.guest-page {
+  width: 100%
+}
 .pagination {
   display: flex;
   margin-top: 30px;
@@ -923,71 +926,38 @@ main .sidebar-holder {
 .bc-footer .designed-by {
   margin-top: 18px
 }
-.profile {
-  text-align: center;
-  padding-top: 50px;
-  padding-left: 16px;
-  padding-right: 16px
-}
-.profile .profile-info {
-  padding-bottom: 16px
-}
-.profile .profile-info p {
-  color: #343a40;
-  margin-top: 12px
-}
-.profile img {
-  display: block;
-  margin: 0 auto;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%
-}
-.profile .blogger {
-  font-size: 18px
-}
-.profile .desc {
-  font-size: 16px
-}
-.profile .counter {
-  margin-top: 32px;
-  margin-bottom: 16px;
-  display: flex
-}
-.profile .counter p {
-  color: #343a40;
-  flex: 1
-}
-.profile .counter span {
-  display: block
-}
-.profile .counter span:first-child {
-  font-weight: 700;
-  margin-bottom: 5px
-}
-.tt_category {
-  border-bottom: 1px solid var(--gray-color-2)
-}
 .category-list .link_item,
 .category-list .link_tit {
-  padding-left: 16px;
-  padding-right: 16px;
-  border-top: 1px solid var(--gray-color-2)
+  padding-left: 24px;
+  padding-right: 24px
+}
+.category-list .link_item,
+.category-list .link_tit img {
+  position: relative;
+  top: -2px
 }
 .category-list .link_sub_item {
   padding-left: 32px;
   padding-right: 16px;
   font-weight: 400
 }
+.category-list .link_item img {
+  position: relative;
+  top: -2px
+}
 .category-list .tt_category a {
   display: block;
   line-height: 60px;
-  color: #343a40
+  color: #000
 }
 .category-list .tt_category .category_list > li > a,
 .category-list .tt_category > li > a {
   font-size: 16px;
   font-weight: 700
+}
+.category-list .sub_category_list img {
+  position: relative;
+  top: -1px
 }
 .sticky-holder {
   z-index: 10;
@@ -1021,19 +991,23 @@ main .sidebar-holder {
   width: 100%;
   height: var(--full-height);
   background: var(--dim-color-2);
-  z-index: 1000
+  z-index: 10000
 }
 #side-menu .panel {
   position: fixed;
-  overflow-y: auto;
   transform: translateX(100%);
   transition: .2s transform ease-in-out;
   top: 0;
   right: 0;
   width: 100%;
-  height: var(--full-height);
+  height: 100%;
   background: #fff;
-  z-index: 1000
+  z-index: 10001
+}
+#side-menu .panel__inner {
+  overflow-y: auto;
+  height: var(--full-height);
+  padding-bottom: 70px
 }
 #side-menu .panel header {
   padding: 10px
@@ -1077,6 +1051,7 @@ main .sidebar-holder {
 }
 #side-menu header {
   position: absolute;
+  z-index: 3;
   top: 0;
   right: 0;
   width: 100%
