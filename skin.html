@@ -82,49 +82,28 @@
             <div class="inner clx">
               <div class="content-holder">
                 <div class="ads-holder">[##_revenue_list_upper_##]</div>
-                <s_article_rep>
-                  <s_index_article_rep>
-                    <div class="index-article"><a class="link_post" href="[##_article_rep_link_##]">
-                        <s_article_rep_thumbnail><img src="[##_article_rep_thumbnail_url_##]"></s_article_rep_thumbnail>
+                <s_list>
+                  <s_list_rep>
+                    <article class="list-article"><a class="link_post" href="[##_list_rep_link_##]">
+                        <s_list_rep_thumbnail><img src="[##_list_rep_thumbnail_url_##]"></s_list_rep_thumbnail>
                         <div class="content">
-                          <p class="category">[##_article_rep_category_##]</p>
-                          <p class="title">[##_article_rep_title_##]</p>
-                          <p class="summary">[##_article_rep_summary_##]</p>
+                          <p class="category">[##_list_rep_category_##]</p>
+                          <p class="title">[##_list_rep_title_##]</p>
+                          <p class="summary">[##_list_rep_summary_##]</p>
                           <div class="meta-info">
-                            <p>[##_article_rep_date_##] 게시됨</p>
+                            <p>[##_list_rep_regdate_##] 게시됨</p>
                           </div>
                         </div>
-                      </a></div>
-                  </s_index_article_rep>
-                  <s_notice_rep>
-                    <article class="bc-markdown">
-                      <header class="bc-markdown__header">
-                        <h2 class="heading"><a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a></h2>
-                        <div class="subinfo">
-                          <p class="subinfo__name">[##_notice_rep_author_##]</p><span>·</span>
-                          <p class="subinfo__date">[##_notice_rep_date_##]</p>
-                        </div>
-                      </header>
-                      <div class="bc-markdown__inner-content">[##_notice_rep_desc_##]</div>
-                    </article>
-                  </s_notice_rep>
-                  <s_article_protected>
-                    <s_permalink_article_rep>
-                      <article class="bc-markdown">
-                        <header class="bc-markdown__header">
-                          <div class="category"><a href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a></div>
-                          <h2 class="heading"><a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a></h2>
-                          <div class="subinfo">
-                            <p class="subinfo__name">[##_article_rep_author_##]</p><span>·</span>
-                            <p class="subinfo__date">[##_article_rep_date_##]</p>
-                          </div>
-                        </header>
-                        <div class="bc-markdown__inner-content">
-                          <p>보호되어 있는 글입니다. 내용을 보시려면 비밀번호를 입력하세요.</p><label for="[##_article_password_##]">비밀번호</label><input type="password" maxlength="16" id="[##_article_password_##]" name="[##_article_password_##]" value="" onkeydown="if (event.keyCode == 13)[##_article_dissolve_##]"><input class="submit" type="button" value="submit" onclick="[##_article_dissolve_##]">
-                        </div>
-                      </article>
-                    </s_permalink_article_rep>
-                  </s_article_protected>
+                      </a></article>
+                  </s_list_rep>
+                  <s_list_empty>
+                    <div class="box-no-search type-search"><span>입력하신 단어의 철자가 정확한지 확인해 보세요.</span><span>검색어의 단어 수를 줄이거나, 보다 일반적인 단어로 검색해 보세요.</span><span>두 단어 이상의 키워드로 검색 하신 경우, 정확하게 띄어쓰기를 한 후 검색해 보세요.</span></div>
+                    <div class="box-no-search type-tag"><span>선택하신 태그에 해당하는 글이 없습니다.</span><span>다른 태그를 선택하시거나, 검색 기능을 활용해 보세요.</span></div>
+                    <div class="box-no-search type-category"><span>선택하신 카테고리에 해당하는 글이 없습니다.</span><span>다른 카테고리를 선택하시거나, 검색 기능을 활용해 보세요.</span></div>
+                    <div class="box-no-search type-archive"><span>선택하신 기간에 등록된 글이 없습니다.</span></div>
+                  </s_list_empty>
+                </s_list>
+                <s_article_rep>
                   <s_permalink_article_rep>
                     <article class="bc-markdown">
                       <div class="bc-markdown__left-side-menu">
@@ -244,6 +223,53 @@
                     </article>
                   </s_permalink_article_rep>
                 </s_article_rep>
+                <s_article_protected>
+                  <s_permalink_article_rep>
+                    <article class="bc-markdown">
+                      <header class="bc-markdown__header">
+                        <div class="category"><a href="[##_article_rep_category_link_##]">[##_article_rep_category_##]</a></div>
+                        <h2 class="heading"><a href="[##_article_rep_link_##]">[##_article_rep_title_##]</a></h2>
+                        <div class="subinfo">
+                          <p class="subinfo__name">[##_article_rep_author_##]</p><span>·</span>
+                          <p class="subinfo__date">[##_article_rep_date_##]</p>
+                        </div>
+                      </header>
+                      <div class="bc-markdown__inner-content">
+                        <p>보호되어 있는 글입니다. 내용을 보시려면 비밀번호를 입력하세요.</p><label for="[##_article_password_##]">비밀번호</label><input type="password" maxlength="16" id="[##_article_password_##]" name="[##_article_password_##]" value="" onkeydown="if (event.keyCode == 13)[##_article_dissolve_##]"><input class="submit" type="button" value="submit" onclick="[##_article_dissolve_##]">
+                      </div>
+                    </article>
+                  </s_permalink_article_rep>
+                </s_article_protected>
+                <s_page_rep>
+                  <s_permalink_article_rep>공지사항 [##_article_rep_title_##] [##_article_rep_author_##] [##_article_rep_date_##]<div class="article-view">[##_article_rep_desc_##]</div>
+                  </s_permalink_article_rep>
+                </s_page_rep>
+                <s_notice_rep>
+                  <s_index_article_rep>
+                    <article class="list-article"><a class="link_post" href="[##_notice_rep_link_##]">
+                        <s_notice_rep_thumbnail><img src="[##_notice_rep_thumbnail_url_##]"></s_notice_rep_thumbnail>
+                        <div class="content">
+                          <p class="title">[##_notice_rep_title_##]</p>
+                          <p class="summary">[##_notice_rep_summary_##]</p>
+                          <div class="meta-info">
+                            <p>[##_notice_rep_date_##] 게시됨</p>
+                          </div>
+                        </div>
+                      </a></article>
+                  </s_index_article_rep>
+                  <s_permalink_article_rep>
+                    <article class="bc-markdown">
+                      <header class="bc-markdown__header">
+                        <h2 class="heading"><a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a></h2>
+                        <div class="subinfo">
+                          <p class="subinfo__name">[##_notice_rep_author_##]</p><span>·</span>
+                          <p class="subinfo__date">[##_notice_rep_date_##]</p>
+                        </div>
+                      </header>
+                      <div class="bc-markdown__inner-content">[##_notice_rep_desc_##]</div>
+                    </article>
+                  </s_permalink_article_rep>
+                </s_notice_rep>
                 <s_tag>
                   <ul class="tags">
                     <s_tag_rep>
@@ -251,6 +277,11 @@
                     </s_tag_rep>
                   </ul>
                 </s_tag>
+                <s_local>
+                  <h3>Local Log</h3>
+                  <s_local_spot_rep>[##_local_spot_##]</s_local_spot_rep>
+                  <s_local_info_rep><a href="[##_local_info_link_##]">[##_local_info_title_##]</a></s_local_info_rep>
+                </s_local>
                 <div class="guest-page">
                   <div class="comment-holder">
                     <s_guest>
@@ -318,7 +349,7 @@
 
                       <!-- 공지사항 -->
                       <s_rct_notice>
-                        <div class="notice card">
+                        <div class="sidebar-notice card">
                           <h3>공지사항</h3>
                           <ul>
                             <s_rct_notice_rep>
@@ -434,6 +465,11 @@
                     </div>
                   </div>
                 </s_if_var_enabled-profile>
+                <s_search>
+                  <div class="search">
+                    <form submit="[##_search_onclick_submit_##]"></form><input type="text" name="[##_search_name_##]" value="[##_search_text_##]" onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }" placeholder="검색어를 입력하세요!"><button type="submit"></button>
+                  </div>
+                </s_search>
                 <div class="category-list">[##_category_list_##]</div>
                 <div class="side-menu-footer">
                   <div class="side-menu-footer__left">
@@ -458,7 +494,7 @@
         </div>
       </div>
     </s_t3>
-    <script type="text/javascript" src="./images/app.c2f97e3bd00a54310fd1.js"></script>
+    <script type="text/javascript" src="./images/app.c8959cc52c07dec32ba4.js"></script>
     <s_if_var_enabled-custom-ads>
       <script>
         (function() {
@@ -467,6 +503,6 @@
         })();
       </script>
     </s_if_var_enabled-custom-ads>
-    <script type="text/javascript" src="./images/script.iQtIWg7AqP5IZyuaBjjk.js"></script>
+    <script type="text/javascript" src="./images/script.SgzbFmHhcdbnigS4TyjF.js"></script>
   </body>
 </html>

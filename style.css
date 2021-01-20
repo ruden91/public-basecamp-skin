@@ -88,6 +88,22 @@ body.prevent-body-scrolling {
 .btn_subscription {
   opacity: 0
 }
+.box-no-search {
+  width: 100%;
+  display: none
+}
+.box-no-search span {
+  font-size: 1.2em;
+  text-align: center;
+  display: block;
+  margin-bottom: 8px
+}
+#tt-body-archive .type-archive,
+#tt-body-category .type-category,
+#tt-body-search .type-search,
+#tt-body-tag .type-tag {
+  display: block
+}
 .bc-header {
   background-color: var(--header-bg-color);
   border-bottom: 1px solid var(--primary-color);
@@ -315,31 +331,31 @@ body.prevent-body-scrolling {
     flex: 1
   }
 }
-.index-article {
+.list-article {
   margin-bottom: 30px
 }
-.index-article:after,
-.index-article:before {
+.list-article:after,
+.list-article:before {
   content: " ";
   display: table
 }
-.index-article:after {
+.list-article:after {
   display: block;
   clear: both;
   height: 1px;
   margin-top: -1px;
   visibility: hidden
 }
-.index-article img {
+.list-article img {
   width: 100%;
   height: 200px;
   vertical-align: top;
   object-fit: cover
 }
-.index-article .content {
+.list-article .content {
   margin-top: 12px
 }
-.index-article .title {
+.list-article .title {
   overflow: hidden;
   word-wrap: normal;
   white-space: normal;
@@ -352,11 +368,11 @@ body.prevent-body-scrolling {
   margin-bottom: 15px;
   color: var(--gray-color-3)
 }
-.index-article .category {
+.list-article .category {
   color: var(--primary-color);
   margin-bottom: 10px
 }
-.index-article .summary {
+.list-article .summary {
   word-wrap: normal;
   white-space: normal;
   text-overflow: ellipsis;
@@ -370,37 +386,43 @@ body.prevent-body-scrolling {
   color: var(--gray-color-4);
   margin-bottom: 15px
 }
-.index-article .meta-info {
+.list-article .meta-info {
   text-align: right;
   color: var(--gray-color-5);
   font-size: 13px
 }
 @media only all and (min-width:481px) {
-  .index-article {
+  .list-article {
     width: 50%
   }
-  .index-article img {
+  .list-article img {
     height: 180px
   }
-  .index-article:nth-child(2n-1) {
-    padding-right: 8px
-  }
-  .index-article:nth-child(2n) {
+  .list-article:nth-child(odd) {
     padding-left: 8px
+  }
+  .list-article:nth-child(2n) {
+    padding-right: 8px
   }
 }
 @media only all and (min-width:768px) {
-  .index-article {
+  .list-article {
     width: 100%;
     float: none
   }
-  .index-article a {
+  .list-article:nth-child(odd) {
+    padding-left: 0
+  }
+  .list-article:nth-child(2n) {
+    padding-right: 0
+  }
+  .list-article a {
     display: flex
   }
-  .index-article img {
+  .list-article img {
     width: 320px
   }
-  .index-article .content {
+  .list-article .content {
     flex: 1;
     padding: 20px 0 20px 20px
   }
@@ -746,53 +768,7 @@ ul.tags li {
 .guest-page {
   width: 100%
 }
-.pagination {
-  display: flex;
-  margin-top: 30px;
-  background-color: #fff;
-  border: 1px solid #e8ebee;
-  border-radius: 6px;
-  box-shadow: 0 1px 1px 0 rgba(0,0,0,.03)
-}
-.pagination .next,
-.pagination .prev {
-  max-width: 50px;
-  background-image: url(images/pagination_arrow_icon.svg);
-  background-repeat: no-repeat;
-  background-size: 24px;
-  background-position: 50% 50%
-}
-.pagination .next {
-  transform: rotate(180deg)
-}
-.pagination .center {
-  display: flex;
-  justify-content: center;
-  flex: 1;
-  margin: 0 auto
-}
-.pagination .page {
-  margin-left: 10px;
-  margin-right: 10px
-}
-.pagination a {
-  display: inline-block;
-  flex: 1;
-  max-width: 30px;
-  height: 55px;
-  font-size: .8rem;
-  text-align: center;
-  line-height: 55px;
-  color: grey;
-  vertical-align: top;
-  text-decoration: none
-}
-.pagination a:hover {
-  color: #000
-}
-.pagination a .selected {
-  color: var(--primary-color)
-}
+
 .recentPost li {
   display: flex;
   margin-bottom: 15px
