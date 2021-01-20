@@ -8,8 +8,8 @@
  <g>
   <title>Layer 1</title>
   <g id="cross">
-   <line stroke-width="2px" stroke-linejoin="round" stroke-linecap="round" stroke="#777777" fill="none" id="svg_1" y2="25" y1="7" x2="25" x1="7" class="cls-1"/>
-   <line stroke-width="2px" stroke-linejoin="round" stroke-linecap="round" stroke="#777777" fill="none" id="svg_2" y2="7" y1="25" x2="25" x1="7" class="cls-1"/>
+   <line stroke-width="2px" stroke-linejoin="round" stroke-linecap="round" stroke="#fff" fill="none" id="svg_1" y2="25" y1="7" x2="25" x1="7" class="cls-1"/>
+   <line stroke-width="2px" stroke-linejoin="round" stroke-linecap="round" stroke="#fff" fill="none" id="svg_2" y2="7" y1="25" x2="25" x1="7" class="cls-1"/>
   </g>
  </g>
 </svg>
