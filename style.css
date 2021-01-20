@@ -882,9 +882,13 @@ main {
   padding-bottom: 54px
 }
 main > .inner {
+  width: 100%;
   display: flex
 }
 main .content-holder {
+  width: 100%
+}
+main .content-holder .ads-holder {
   width: 100%
 }
 main .sidebar-holder {
