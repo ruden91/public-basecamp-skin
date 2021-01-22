@@ -33,6 +33,9 @@
   --markdown-border-color: #3a3b3d;
   --navigation-border-color: #1e1f21
 }
+html {
+  line-height: 1.5
+}
 * {
   padding: 0;
   margin: 0;
@@ -151,6 +154,9 @@ body.prevent-body-scrolling {
 .bc-markdown__left-side-menu {
   opacity: 0
 }
+.bc-markdown__header {
+  margin-bottom: 30px
+}
 .bc-markdown__header .category {
   margin-bottom: 8px
 }
@@ -195,54 +201,54 @@ body.prevent-body-scrolling {
     padding-right: 34px
   }
 }
-.bc-markdown__inner-content .tt_article_useless_p_margin p {
+.bc-markdown__inner-content p {
   font-weight: 300
 }
-.bc-markdown__inner-content .tt_article_useless_p_margin blockquote,
-.bc-markdown__inner-content .tt_article_useless_p_margin figure,
-.bc-markdown__inner-content .tt_article_useless_p_margin h2,
-.bc-markdown__inner-content .tt_article_useless_p_margin h3,
-.bc-markdown__inner-content .tt_article_useless_p_margin h4,
-.bc-markdown__inner-content .tt_article_useless_p_margin ol,
-.bc-markdown__inner-content .tt_article_useless_p_margin p,
-.bc-markdown__inner-content .tt_article_useless_p_margin pre,
-.bc-markdown__inner-content .tt_article_useless_p_margin table,
-.bc-markdown__inner-content .tt_article_useless_p_margin ul {
+.bc-markdown__inner-content blockquote,
+.bc-markdown__inner-content figure,
+.bc-markdown__inner-content h2,
+.bc-markdown__inner-content h3,
+.bc-markdown__inner-content h4,
+.bc-markdown__inner-content ol,
+.bc-markdown__inner-content p,
+.bc-markdown__inner-content pre,
+.bc-markdown__inner-content table,
+.bc-markdown__inner-content ul {
   margin-bottom: 30px!important
 }
-.bc-markdown__inner-content .tt_article_useless_p_margin .og-host {
+.bc-markdown__inner-content .og-host {
   margin-bottom: 0!important
 }
-.bc-markdown__inner-content .tt_article_useless_p_margin table {
+.bc-markdown__inner-content table {
   overflow-x: scroll;
   border: none;
   table-layout: fixed
 }
-.bc-markdown__inner-content .tt_article_useless_p_margin table tbody tr:nth-child(2n) {
+.bc-markdown__inner-content table tbody tr:nth-child(2n) {
   background-color: #f8f9fa
 }
-.bc-markdown__inner-content .tt_article_useless_p_margin table tbody td {
+.bc-markdown__inner-content table tbody td {
   font-size: 13px;
   text-align: center;
   padding: 12px;
   word-break: break-word
 }
-.bc-markdown__inner-content .tt_article_useless_p_margin ol,
-.bc-markdown__inner-content .tt_article_useless_p_margin ul {
+.bc-markdown__inner-content ol,
+.bc-markdown__inner-content ul {
   margin-left: 20px
 }
-.bc-markdown__inner-content .tt_article_useless_p_margin ol li,
-.bc-markdown__inner-content .tt_article_useless_p_margin ul li {
+.bc-markdown__inner-content ol li,
+.bc-markdown__inner-content ul li {
   margin-bottom: 5px
 }
-.bc-markdown__inner-content .tt_article_useless_p_margin ol li:last-child,
-.bc-markdown__inner-content .tt_article_useless_p_margin ul li:last-child {
+.bc-markdown__inner-content ol li:last-child,
+.bc-markdown__inner-content ul li:last-child {
   margin-bottom: 0
 }
-.bc-markdown__inner-content .tt_article_useless_p_margin hr {
+.bc-markdown__inner-content hr {
   margin: 0 auto 30px!important
 }
-.bc-markdown__inner-content .tt_article_useless_p_margin a {
+.bc-markdown__inner-content a {
   color: var(--primary-color);
   text-decoration: underline;
   font-weight: 700
@@ -367,6 +373,15 @@ body.prevent-body-scrolling {
   font-size: 18px;
   margin-bottom: 15px;
   color: var(--gray-color-3)
+}
+.list-article .title img {
+  vertical-align: middle;
+  margin-left: 8px;
+  padding-left: 0!important;
+  transform: translateY(-1px);
+  width: 12px;
+  height: 12px;
+  object-fit: cover
 }
 .list-article .category {
   color: var(--primary-color);
@@ -854,6 +869,7 @@ ul.tags li {
   overflow-x: hidden
 }
 main {
+  overflow: hidden;
   padding-top: 160px;
   padding-bottom: 54px
 }
