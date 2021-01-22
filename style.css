@@ -195,54 +195,54 @@ body.prevent-body-scrolling {
     padding-right: 34px
   }
 }
-.bc-markdown__inner-content p {
+.bc-markdown__inner-content .tt_article_useless_p_margin p {
   font-weight: 300
 }
-.bc-markdown__inner-content blockquote,
-.bc-markdown__inner-content figure,
-.bc-markdown__inner-content h2,
-.bc-markdown__inner-content h3,
-.bc-markdown__inner-content h4,
-.bc-markdown__inner-content ol,
-.bc-markdown__inner-content p,
-.bc-markdown__inner-content pre,
-.bc-markdown__inner-content table,
-.bc-markdown__inner-content ul {
+.bc-markdown__inner-content .tt_article_useless_p_margin blockquote,
+.bc-markdown__inner-content .tt_article_useless_p_margin figure,
+.bc-markdown__inner-content .tt_article_useless_p_margin h2,
+.bc-markdown__inner-content .tt_article_useless_p_margin h3,
+.bc-markdown__inner-content .tt_article_useless_p_margin h4,
+.bc-markdown__inner-content .tt_article_useless_p_margin ol,
+.bc-markdown__inner-content .tt_article_useless_p_margin p,
+.bc-markdown__inner-content .tt_article_useless_p_margin pre,
+.bc-markdown__inner-content .tt_article_useless_p_margin table,
+.bc-markdown__inner-content .tt_article_useless_p_margin ul {
   margin-bottom: 30px!important
 }
-.bc-markdown__inner-content .og-host {
+.bc-markdown__inner-content .tt_article_useless_p_margin .og-host {
   margin-bottom: 0!important
 }
-.bc-markdown__inner-content table {
+.bc-markdown__inner-content .tt_article_useless_p_margin table {
   overflow-x: scroll;
   border: none;
   table-layout: fixed
 }
-.bc-markdown__inner-content table tbody tr:nth-child(2n) {
+.bc-markdown__inner-content .tt_article_useless_p_margin table tbody tr:nth-child(2n) {
   background-color: #f8f9fa
 }
-.bc-markdown__inner-content table tbody td {
+.bc-markdown__inner-content .tt_article_useless_p_margin table tbody td {
   font-size: 13px;
   text-align: center;
   padding: 12px;
   word-break: break-word
 }
-.bc-markdown__inner-content ol,
-.bc-markdown__inner-content ul {
+.bc-markdown__inner-content .tt_article_useless_p_margin ol,
+.bc-markdown__inner-content .tt_article_useless_p_margin ul {
   margin-left: 20px
 }
-.bc-markdown__inner-content ol li,
-.bc-markdown__inner-content ul li {
+.bc-markdown__inner-content .tt_article_useless_p_margin ol li,
+.bc-markdown__inner-content .tt_article_useless_p_margin ul li {
   margin-bottom: 5px
 }
-.bc-markdown__inner-content ol li:last-child,
-.bc-markdown__inner-content ul li:last-child {
+.bc-markdown__inner-content .tt_article_useless_p_margin ol li:last-child,
+.bc-markdown__inner-content .tt_article_useless_p_margin ul li:last-child {
   margin-bottom: 0
 }
-.bc-markdown__inner-content hr {
+.bc-markdown__inner-content .tt_article_useless_p_margin hr {
   margin: 0 auto 30px!important
 }
-.bc-markdown__inner-content a {
+.bc-markdown__inner-content .tt_article_useless_p_margin a {
   color: var(--primary-color);
   text-decoration: underline;
   font-weight: 700
@@ -985,9 +985,15 @@ main .sidebar-holder {
   z-index: 10001
 }
 #side-menu .panel__inner {
+  position: abbsolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   overflow-y: auto;
-  height: var(--full-height);
-  padding-bottom: 70px
+  background: #fff;
+  -webkit-overflow-scrolling: touch;
+  height: var(--full-height)
 }
 #side-menu .panel header {
   padding: 10px
