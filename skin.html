@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>[##_page_title_##]</title>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.0/dist/lazyload.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
     <script>
       (function() {
@@ -13,8 +14,11 @@
         root.style.setProperty('--primary-color', '[##_var_primary-color_##]');
       })();
     </script>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notosanskr.css">
+    <link rel="preconnect" href="//cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="//fonts.googleapis.com/earlyaccess/notosanskr.css">
+    <link rel="preconnect" href="https://blog.kakaocdn.net">
+    <link rel="preconnect" href="https://t1.daumcdn.net">
+    <link rel="preconnect" href="https://img1.daumcdn.net">
     <link rel="stylesheet" href="./style.css">
   </head>
   <body id="[##_body_id_##]">
@@ -62,7 +66,7 @@
                       <s_not_var_logo-image>[##_title_##]</s_not_var_logo-image>
                     </a></h1>
                 </div>
-                <div class="right-side"><a class="menu-opener"><img src="./images/menu_icon.svg"></a></div>
+                <div class="right-side"><a class="menu-opener"><img src="./images/menu_icon.svg" alt="menu-opener icon"></a></div>
               </div>
             </div>
           </header>
@@ -80,7 +84,7 @@
                 <s_list>
                   <s_list_rep>
                     <article class="list-article"><a class="link_post" href="[##_list_rep_link_##]">
-                        <s_list_rep_thumbnail><img src="[##_list_rep_thumbnail_url_##]"></s_list_rep_thumbnail>
+                        <s_list_rep_thumbnail><img class="lazy" src="./images/lazy_img.svg" data-src="[##_list_rep_thumbnail_url_##]" alt="[##_list_rep_title_##] 포스팅 썸네일 이미지"></s_list_rep_thumbnail>
                         <div class="content">
                           <p class="category">[##_list_rep_category_##]</p>
                           <p class="title">[##_list_rep_title_##]</p>
@@ -242,7 +246,7 @@
                 <s_notice_rep>
                   <s_index_article_rep>
                     <article class="list-article"><a class="link_post" href="[##_notice_rep_link_##]">
-                        <s_notice_rep_thumbnail><img src="[##_notice_rep_thumbnail_url_##]"></s_notice_rep_thumbnail>
+                        <s_notice_rep_thumbnail><img class="lazy" data-src="[##_notice_rep_thumbnail_url_##]"></s_notice_rep_thumbnail>
                         <div class="content">
                           <p class="title">[##_notice_rep_title_##]</p>
                           <p class="summary">[##_notice_rep_summary_##]</p>
@@ -329,10 +333,10 @@
                   </div>
                 </div>
                 <s_paging>
-                  <div class="pagination"><a class="prev [##_no_more_prev_##]" [##_prev_page_##]=""></a>
+                  <div class="pagination"><a class="prev [##_no_more_prev_##]" [##_prev_page_##]="" href="javascript:;" aria-label="이전"></a>
                     <div class="center">
                       <s_paging_rep><a class="page" [##_paging_rep_link_##]="">[##_paging_rep_link_num_##]</a></s_paging_rep>
-                    </div><a class="next [##_no_more_next_##]" [##_next_page_##]=""></a>
+                    </div><a class="next [##_no_more_next_##]" [##_next_page_##]="" href="javascript:;" aria-label="다음"></a>
                   </div>
                 </s_paging>
                 <div class="ads-holder">[##_revenue_list_lower_##]</div>
@@ -345,7 +349,7 @@
                       <!-- 공지사항 -->
                       <s_rct_notice>
                         <div class="sidebar-notice card">
-                          <h3>공지사항</h3>
+                          <p>공지사항</p>
                           <ul>
                             <s_rct_notice_rep>
                               <li><a href="[##_notice_rep_link_##]">[##_notice_rep_title_##]</a></li>
@@ -358,11 +362,11 @@
 
                       <!-- 최근에 올라온 글 -->
                       <div class="recentPost card">
-                        <h3>최근글</h3>
+                        <p>최근글</p>
                         <ul>
                           <s_rctps_rep>
                             <li>
-                              <s_rctps_rep_thumbnail><a href="[##_rctps_rep_link_##]"><img src="[##_rctps_rep_thumbnail_##]"></a>
+                              <s_rctps_rep_thumbnail><a href="[##_rctps_rep_link_##]" aria-label="recent-post-item"><img class="lazy" src="./images/lazy_img.svg" data-src="[##_rctps_rep_thumbnail_##]" alt="최근글 [##_rctps_rep_title_##] 포스팅"></a>
                                 <div class="info">
                                   <p class="category">[##_rctps_rep_category_##]</p>
                                   <p class="title">[##_rctps_rep_title_##]</p>
@@ -378,11 +382,11 @@
 
                       <!-- 이 블로그 인기글 -->
                       <div class="popularPost card">
-                        <h3>인기글</h3>
+                        <p>인기글</p>
                         <ul>
                           <s_rctps_popular_rep>
                             <li>
-                              <s_rctps_rep_thumbnail><a href="[##_rctps_rep_link_##]"><img src="[##_rctps_rep_thumbnail_##]">
+                              <s_rctps_rep_thumbnail><a href="[##_rctps_rep_link_##]" aria-label="popular-post-item"><img class="lazy" src="./images/lazy_img.svg" data-src="[##_rctps_rep_thumbnail_##]" alt="인기글 [##_rctps_rep_title_##] 포스팅">
                                   <div class="info">
                                     <p class="category">[##_rctps_rep_category_##]</p>
                                     <p class="title">[##_rctps_rep_title_##]</p>
@@ -398,7 +402,7 @@
 
                       <!-- 최근에 달린 댓글 -->
                       <div class="recentComment card">
-                        <h3>최근 작성된 댓글</h3>
+                        <p>최근 작성된 댓글</p>
                         <ul>
                           <s_rctrp_rep>
                             <li><a href="[##_rctrp_rep_link_##]"><b class="name">[##_rctrp_rep_name_##] </b>[##_rctrp_rep_desc_##]</a></li>
@@ -412,7 +416,7 @@
 
                       <!-- 태그 클라우드 -->
                       <div class="tagbox card">
-                        <h3>태그 클라우드</h3>
+                        <p>태그 클라우드</p>
                         <ul>
                           <s_random_tags>
                             <li><a class="[##_tag_class_##] tag" href="[##_tag_link_##]">[##_tag_name_##]</a></li>
@@ -429,7 +433,7 @@
         <footer class="bc-footer container">
           <div class="inner">
             <address class="copyright">Copyright <time></time>. <b>[##_var_copyright_##]</b> all rights reserved.</address>
-            <address class="designed-by"><a href="https://webruden.tistory.com" target="_blank">Designed by <b data-copyright="bc">베이스캠프</b></a></address>
+            <address class="designed-by"><a href="https://webruden.tistory.com" target="_blank" rel="noopener noreferer">Designed by <b data-copyright="bc">베이스캠프</b></a></address>
           </div>
         </footer>
         <div id="side-menu">
@@ -441,12 +445,12 @@
                 <s_if_var_enabled-profile>
                   <div class="side-profile">
                     <div class="side-profile__bg">
-                      <s_if_var_profile-bg-image><img src="[##_var_profile-bg-image_##]" alt="사이드 프로필 배경이미지"></s_if_var_profile-bg-image>
-                      <s_not_var_profile-bg-image><img src="./images/profile_default_image.jpg" alt="사이드 프로필 배경이미지"></s_not_var_profile-bg-image>
+                      <s_if_var_profile-bg-image><img class="lazy" data-src="[##_var_profile-bg-image_##]" alt="사이드 프로필 배경이미지"></s_if_var_profile-bg-image>
+                      <s_not_var_profile-bg-image><img class="lazy" data-src="./images/profile_default_image.jpg" alt="사이드 프로필 배경이미지"></s_not_var_profile-bg-image>
                     </div>
                     <div class="side-profile__info">
                       <div class="side-profile__info-inner">
-                        <s_if_var_profile-avatar><img src="[##_var_profile-avatar_##]" alt="아바타 이미지"></s_if_var_profile-avatar>
+                        <s_if_var_profile-avatar><img class="lazy" data-src="[##_var_profile-avatar_##]" alt="아바타 이미지"></s_if_var_profile-avatar>
                         <s_not_var_profile-avatar>[##_blog_image_##]</s_not_var_profile-avatar>
                         <p class="title">
                           <s_if_var_profile-title>[##_var_profile-title_##]</s_if_var_profile-title>
@@ -461,9 +465,7 @@
                   </div>
                 </s_if_var_enabled-profile>
                 <s_search>
-                  <div class="search">
-                    <form submit="[##_search_onclick_submit_##]"><input type="text" name="[##_search_name_##]" value="[##_search_text_##]" onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }" placeholder="검색어를 입력하세요!"><button type="submit"></button></form>
-                  </div>
+                  <div class="search"><label>검색 라벨<input type="text" name="search-input" value="[##_search_text_##]" onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }" placeholder="검색어를 입력하세요!"></label><button onclick="[##_search_onclick_submit_##]" aria-label="search-submit"></button></div>
                 </s_search>
                 <div class="category-list">[##_category_list_##]</div>
                 <div class="side-menu-footer">
@@ -477,7 +479,7 @@
                     </s_if_var_enabled-counter>
                   </div>
                   <div class="side-menu-footer__right">
-                    <address class="designed-by"><a href="https://webruden.tistory.com" target="_blank">Designed by <b data-copyright="bc">베이스캠프</b></a></address>
+                    <address class="designed-by"><a href="https://webruden.tistory.com" target="_blank" rel="noopener noreferer">Designed by <b data-copyright="bc">베이스캠프</b></a></address>
                   </div>
                 </div>
               </div>
@@ -489,7 +491,40 @@
         </div>
       </div>
     </s_t3>
-    <script type="text/javascript" src="./images/app.2f272c1ca7e9f1feb2e9.js"></script>
+    <script type="text/javascript" src="./images/app.0705f9634cc6b56e0fee.js"></script>
+    <script>
+      (function() {
+        window.onload = function() {
+          // 티스토리에서 자동 삽입되는 요소 중에
+          // lighthouse 퍼포먼스 체크에 방해되는 요소들 개선
+          var tRateBtn = document.querySelector("#rate_btn_rateus");
+          var editEntry = document.querySelector('#editEntry');
+          var lbEl = document.querySelector(".lb-cancel");
+          var pageEl = document.querySelectorAll('.pagination a:not([href])');
+          if (tRateBtn) {
+            tRateBtn.setAttribute("rel", "noopener noreferer");
+          }
+          if (lbEl) {
+            lbEl.setAttribute('href', 'javascript:;');
+          }
+          if (pageEl) {
+            Array.from(pageEl).map(function(el) {
+              return el.setAttribute('href', 'javascript:;');
+            });
+          }
+          if (editEntry) {
+            editEntry.setAttribute('title', 'editEntry');
+          }
+        };
+      })();
+    </script>
+    <script>
+      (function() {
+        var lazyLoadInstance = new LazyLoad({
+          skip_invisible: true
+        });
+      })();
+    </script>
     <s_if_var_enabled-custom-ads>
       <script>
         (function() {
@@ -498,6 +533,6 @@
         })();
       </script>
     </s_if_var_enabled-custom-ads>
-    <script type="text/javascript" src="./images/script.Ja0TTEnRTp3qCZJAcCje.js"></script>
+    <script type="text/javascript" src="./images/script.W4rYHO8R8GTi4hEUBUuJ.js"></script>
   </body>
 </html>
