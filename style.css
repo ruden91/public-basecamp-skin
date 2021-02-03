@@ -110,6 +110,11 @@ body.prevent-body-scrolling {
 img:not([src]):not([srcset]) {
   visibility: hidden
 }
+.box-no-search {
+  padding-top: 50px;
+  padding-bottom: 100px;
+  height: 50vh
+}
 .bc-header {
   background-color: var(--header-bg-color);
   border-bottom: 1px solid var(--primary-color);
@@ -140,6 +145,18 @@ img:not([src]):not([srcset]) {
 }
 .menu-opener img {
   width: 28px
+}
+#tt-body-page:not(.marginless) .bc-markdown__inner-content blockquote,
+#tt-body-page:not(.marginless) .bc-markdown__inner-content figure,
+#tt-body-page:not(.marginless) .bc-markdown__inner-content h2,
+#tt-body-page:not(.marginless) .bc-markdown__inner-content h3,
+#tt-body-page:not(.marginless) .bc-markdown__inner-content h4,
+#tt-body-page:not(.marginless) .bc-markdown__inner-content ol,
+#tt-body-page:not(.marginless) .bc-markdown__inner-content p,
+#tt-body-page:not(.marginless) .bc-markdown__inner-content pre,
+#tt-body-page:not(.marginless) .bc-markdown__inner-content table,
+#tt-body-page:not(.marginless) .bc-markdown__inner-content ul {
+  margin-bottom: 30px!important
 }
 .bc-markdown {
   position: relative;
@@ -206,18 +223,6 @@ img:not([src]):not([srcset]) {
 }
 .bc-markdown__inner-content p {
   font-weight: 300
-}
-.bc-markdown__inner-content blockquote,
-.bc-markdown__inner-content figure,
-.bc-markdown__inner-content h2,
-.bc-markdown__inner-content h3,
-.bc-markdown__inner-content h4,
-.bc-markdown__inner-content ol,
-.bc-markdown__inner-content p,
-.bc-markdown__inner-content pre,
-.bc-markdown__inner-content table,
-.bc-markdown__inner-content ul {
-  margin-bottom: 30px!important
 }
 .bc-markdown__inner-content .og-host {
   margin-bottom: 0!important
@@ -789,8 +794,10 @@ ul.tags li {
 }
 
 .recentPost li {
-  display: flex;
   margin-bottom: 15px
+}
+.recentPost li a {
+  display: flex
 }
 .recentPost li:last-child {
   margin-bottom: 0
@@ -801,7 +808,6 @@ ul.tags li {
   object-fit: cover
 }
 .recentPost li .info {
-  padding-top: 10px;
   padding-left: 15px;
   flex: 1
 }
@@ -811,6 +817,7 @@ ul.tags li {
 }
 .recentPost li .info .date {
   margin-top: 6px;
+  margin-bottom: 0;
   font-size: 10px;
   color: var(--gray-color-5)
 }
@@ -835,17 +842,18 @@ ul.tags li {
   object-fit: cover
 }
 .popularPost li .info {
-  padding-top: 10px;
   padding-left: 15px;
   flex: 1
 }
 .popularPost li .info .title {
   display: block;
-  color: var(--gray-color-3)
+  color: var(--gray-color-3);
+  margin-bottom: 10px
 }
 .popularPost li .info .date {
   margin-top: 6px;
   font-size: 10px;
+  margin-bottom: 0;
   color: var(--gray-color-5)
 }
 .popularPost li .info .category {

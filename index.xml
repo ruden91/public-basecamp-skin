@@ -171,6 +171,15 @@
             <type>STRING</type>
             <default></default>
          </variable>                 
-      </variablegroup>      
+      </variablegroup>
+      <variablegroup name="퍼머링크">        
+         <variable>
+            <name>markdown-marginless</name>
+            <label>마크다운 간격 초기화</label>
+            <description></description>
+            <type>BOOL</type>
+            <default>true</default>
+         </variable>                         
+      </variablegroup>
    </variables>   
 </skin>
