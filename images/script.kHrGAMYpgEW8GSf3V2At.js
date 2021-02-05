@@ -26,7 +26,7 @@
 
         // 공감하지 않았다면 유도문구 추가
         if (!likeEl.querySelector('.like_on')) {
-          __BASECAMP__.toast.send('유익하셨다면 공감 하나 부탁드릴게요! ✨');
+          __BASECAMP__.toast.send(__TISTORY_VARIABLES__['toast-msg-post-end']);
           // 모바일에서 visible 공감영역 visible 시킨다.
           var sideMenuEl = document.querySelector('.bc-markdown .bc-markdown__left-side-menu');
 
@@ -67,7 +67,7 @@
     __BASECAMP__.share.copy();
     __BASECAMP__.popup.hide();
 
-    __BASECAMP__.toast.send('포스팅 주소를 복사했습니다 📄');
+    __BASECAMP__.toast.send(__TISTORY_VARIABLES__['toast-msg-copy']);
   });
 })();
 (function() {
