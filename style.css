@@ -8,6 +8,9 @@
   --gray-color-5: #707070;
   --default-font-color: #000;
   --sm-font-size: 12px;
+  --markdown-default-font-size: 16px;
+  --markdown-heading-font-size: 2.2em;
+  --markdown-p-font-size: 1.12em;
   --default-bg-color: #fff;
   --body-bg-color: #fafbfc;
   --markdown-bg-color: #fff;
@@ -146,6 +149,9 @@ img:not([src]):not([srcset]) {
 .menu-opener img {
   width: 28px
 }
+#tt-body-page .bc-markdown p[data-ke-size=size18] {
+  font-size: var(--markdown-p-font-size)
+}
 #tt-body-page:not(.marginless) .bc-markdown__inner-content blockquote,
 #tt-body-page:not(.marginless) .bc-markdown__inner-content figure,
 #tt-body-page:not(.marginless) .bc-markdown__inner-content h2,
@@ -161,12 +167,18 @@ img:not([src]):not([srcset]) {
 .bc-markdown {
   position: relative;
   line-height: 1.5;
-  font-size: 13px;
+  font-size: var(--markdown-default-font-size);
   padding: 50px 16px;
   border: 1px solid var(--markdown-border-color);
   border-radius: 12px;
   box-shadow: 0 1px 1px 0 rgba(0,0,0,.03);
   background-color: var(--markdown-bg-color)
+}
+@media only all and (min-width:768px) {
+  .bc-markdown {
+    padding-left: 34px;
+    padding-right: 34px
+  }
 }
 .bc-markdown .thumbnail {
   display: none
@@ -185,7 +197,7 @@ img:not([src]):not([srcset]) {
   font-weight: 700
 }
 .bc-markdown__header .heading {
-  font-size: 2.2em;
+  font-size: var(--markdown-heading-font-size);
   line-height: 1.1
 }
 .bc-markdown__header .heading a {
@@ -213,13 +225,6 @@ img:not([src]):not([srcset]) {
 }
 .bc-markdown .post-inner-ads {
   margin-bottom: 30px
-}
-@media only all and (min-width:768px) {
-  .bc-markdown {
-    font-size: 16px;
-    padding-left: 34px;
-    padding-right: 34px
-  }
 }
 .bc-markdown__inner-content p {
   font-weight: 300

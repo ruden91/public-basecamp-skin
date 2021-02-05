@@ -66,6 +66,52 @@
             <default>false</default>
          </variable>          -->
       </variablegroup>
+      <variablegroup name="폰트">        
+         <variable>
+            <name>markdown-default-font-size</name>
+            <label>포스팅 폰트 사이즈</label>
+            <description>해당 폰트 기본값을 기준으로 콘텐츠 내부 폰트 사이즈가 조정됩니다.</description>
+            <type>STRING</type>
+            <default>16px</default>
+         </variable>      
+         <variable>
+            <name>markdown-heading-font-size</name>
+            <label>포스팅 타이틀 사이즈</label>
+            <description></description>
+            <type>STRING</type>
+            <default>2.2em</default>
+         </variable>
+         <variable>
+            <name>markdown-p-font-size</name>
+            <label>포스팅 본문 폰트 사이즈</label>
+            <description></description>
+            <type>STRING</type>
+            <default>1.12em</default>
+         </variable>                                                                  
+      </variablegroup>      
+      <variablegroup name="메시지">        
+         <variable>
+            <name>toast-msg-copy</name>
+            <label>복사</label>
+            <description></description>
+            <type>STRING</type>
+            <default>포스팅 주소를 복사했습니다 📄</default>
+         </variable>        
+         <variable>
+            <name>toast-msg-post-like</name>
+            <label>공감</label>
+            <description></description>
+            <type>STRING</type>
+            <default>소중한 공감 하나 감사합니다 💖</default>
+         </variable>        
+         <variable>
+            <name>toast-msg-post-end</name>
+            <label>포스트 엔딩</label>
+            <description></description>
+            <type>STRING</type>
+            <default>유익하셨다면 공감 하나 부탁드릴게요! ✨</default>
+         </variable>               
+      </variablegroup>      
       <variablegroup name="프로필">        
          <variable>
             <name>enabled-profile</name>
@@ -110,29 +156,6 @@
             <default>true</default>
          </variable>         
       </variablegroup>
-      <!-- <variablegroup name="토스트 메시지">        
-         <variable>
-            <name>toast-msg-copy</name>
-            <label>복사</label>
-            <description></description>
-            <type>STRING</type>
-            <default>포스팅 주소를 복사했습니다 📄</default>
-         </variable>        
-         <variable>
-            <name>toast-msg-post-like</name>
-            <label>공감</label>
-            <description></description>
-            <type>STRING</type>
-            <default>소중한 공감 하나 감사합니다 💖</default>
-         </variable>        
-         <variable>
-            <name>toast-msg-post-end</name>
-            <label>포스트 엔딩</label>
-            <description></description>
-            <type>STRING</type>
-            <default>유익하셨다면 공감 하나 부탁드릴게요! ✨</default>
-         </variable>        
-      </variablegroup>                   -->
       <variablegroup name="본문 커스텀 애드센스">        
          <variable>
             <name>enabled-custom-ads</name>
