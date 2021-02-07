@@ -319,6 +319,52 @@ img:not([src]):not([srcset]) {
     width: 50%
   }
 }
+.bc-markdown__left-side-drawer.visible .panel {
+  transform: translateX(0)
+}
+.bc-markdown__left-side-drawer.visible .dim {
+  display: block
+}
+.bc-markdown__left-side-drawer .dim {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--full-height);
+  background: var(--dim-color-2);
+  z-index: 10000
+}
+.bc-markdown__left-side-drawer .panel {
+  position: fixed;
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform .2s ease-in-out;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  background: #fff;
+  z-index: 10001
+}
+.bc-markdown__left-side-drawer .panel .bc-quickmenu__list {
+  padding: 30px 16px
+}
+.bc-markdown__left-side-drawer .panel .bc-quickmenu__list .bc-quickmenu__item--h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  margin-top: 12px
+}
+.bc-markdown__left-side-drawer .panel .bc-quickmenu__list .bc-quickmenu__item--h3 {
+  padding-left: 16px;
+  margin-bottom: 12px
+}
+@media only all and (min-width:768px) {
+  .bc-markdown__bottm-navigator {
+    display: none
+  }
+}
 .bc-sidebar {
   font-size: 14px;
   margin-bottom: 20px
@@ -901,7 +947,7 @@ main .content-holder .ads-holder {
   width: 100%
 }
 main .sidebar-holder {
-  display: none
+  margin-top: 20px
 }
 @media screen and (min-width:1090px) {
   main .content-holder {
@@ -910,6 +956,7 @@ main .sidebar-holder {
     padding-right: 60px
   }
   main .sidebar-holder {
+    margin-top: 0;
     display: block;
     float: left;
     width: 360px
