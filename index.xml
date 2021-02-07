@@ -58,13 +58,13 @@
             <type>BOOL</type>
             <default>true</default>
          </variable>         
-         <!-- <variable>
-            <name>enabled-darkmode</name>
-            <label>다크모드</label>
+         <variable>
+            <name>disable-sidebar</name>
+            <label>사이드바 비활성화</label>
             <description></description>
             <type>BOOL</type>
             <default>false</default>
-         </variable>          -->
+         </variable>         
       </variablegroup>
       <variablegroup name="폰트">        
          <variable>

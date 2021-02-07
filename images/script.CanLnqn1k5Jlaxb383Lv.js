@@ -1,13 +1,4 @@
 (function() {
-  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    // 초기렌더링 퍼프먼스 향상을 위해
-    // 모바일에서 사이드바 제거          
-    if (document.querySelector('.sidebar-holder')) {
-      document.querySelector('.sidebar-holder').remove();
-    }
-  }
-})();
-(function() {
   var el = document.querySelector('.bc-markdown .bc-markdown__inner-content');
   if (!el) return;
 
@@ -54,6 +45,16 @@
   }, '');
   el.classList.add('bc-share');
   el.innerHTML = '\n      ' + imageEl + '\n      <div class="content">\n        <p class="title">' + title + '</p>\n        <ul>\n          ' + shares + '\n        </ul>\n        <div class="url-copy-holder">\n          <input id="copy" value="' + location.href + '" readonly="readonly">\n          <button data-clipboard-target="#copy" class="copy-btn">\uC8FC\uC18C\uBCF5\uC0AC</button>\n        </div>        \n      </div>\n    ';
+
+  document.querySelector('.share-btn').addEventListener('click', function(e) {
+    e.preventDefault();
+
+    __BASECAMP__.popup.show(el);
+  });
+
+  document.querySelector('.search-btn').addEventListener('click', function(e) {
+    document.querySelector('.bc-header .menu-opener').click();
+  });
 
   document.querySelector('#share-reaction').addEventListener('click', function() {
     __BASECAMP__.popup.show(el);
