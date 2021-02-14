@@ -64,7 +64,14 @@
             <description></description>
             <type>BOOL</type>
             <default>false</default>
-         </variable>         
+         </variable> 
+         <variable>
+            <name>active-header-searchbar</name>
+            <label>헤더 검색바 활성화</label>
+            <description></description>
+            <type>BOOL</type>
+            <default>true</default>
+         </variable>                    
       </variablegroup>
       <variablegroup name="폰트">        
          <variable>
