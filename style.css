@@ -381,6 +381,163 @@ img:not([src]):not([srcset]) {
     display: none
   }
 }
+.bc-markdown .recommend-bottom-drawer.visible .dim {
+  display: block
+}
+.bc-markdown .recommend-bottom-drawer.visible .panel {
+  transform: translateY(0)
+}
+.bc-markdown .recommend-bottom-drawer .dim {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--full-height);
+  background: var(--dim-color-2);
+  z-index: 10000
+}
+.bc-markdown .recommend-bottom-drawer .panel {
+  position: fixed;
+  transition: all .25s ease-in-out;
+  transform: translateY(100%);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  background: #fff;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 0 -1px 4px 0 rgba(0,0,0,.05);
+  z-index: 10001
+}
+.bc-markdown .recommend-bottom-drawer .panel__inner {
+  height: 80vh;
+  overflow-y: auto;
+  padding: 32px 16px
+}
+.bc-markdown .recommend-bottom-drawer .another-content,
+.bc-markdown .recommend-bottom-drawer .prev-next-content,
+.bc-markdown .recommend-bottom-drawer .related-content {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--markdown-border-color)
+}
+.bc-markdown .recommend-bottom-drawer .related-content h2 {
+  text-align: left;
+  font-size: 16px;
+  margin-bottom: 12px;
+  font-weight: 400
+}
+.bc-markdown .recommend-bottom-drawer .related-content h2 b {
+  color: var(--primary-color);
+  font-weight: 700
+}
+.bc-markdown .recommend-bottom-drawer .related-content ul {
+  display: block;
+  white-space: nowrap;
+  overflow-x: auto
+}
+.bc-markdown .recommend-bottom-drawer .related-content ul li {
+  display: inline-block;
+  width: 150px;
+  margin-right: 12px
+}
+.bc-markdown .recommend-bottom-drawer .related-content ul li .content p {
+  overflow: hidden;
+  word-wrap: normal;
+  white-space: normal;
+  text-overflow: ellipsis;
+  display: inline-block;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-align: left;
+  font-size: 12px;
+  color: var(--default-font-color)
+}
+.bc-markdown .recommend-bottom-drawer .related-content ul li img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover
+}
+.bc-markdown .recommend-bottom-drawer .prev-next-content .prev-article {
+  margin-bottom: 12px
+}
+.bc-markdown .recommend-bottom-drawer .prev-next-content img {
+  width: 100%;
+  object-fit: cover
+}
+.bc-markdown .recommend-bottom-drawer .prev-next-content .content {
+  text-align: left
+}
+.bc-markdown .recommend-bottom-drawer .prev-next-content .content p {
+  font-size: 14px;
+  color: var(--gray-color-3)
+}
+.bc-markdown .recommend-bottom-drawer .prev-next-content .content p.title {
+  color: var(--gray-color-5);
+  font-size: 12px
+}
+.bc-markdown .recommend-bottom-drawer .recommend-content .popularPost > p,
+.bc-markdown .recommend-bottom-drawer .recommend-content .recentPost > p {
+  display: none
+}
+.bc-markdown .recommend-bottom-drawer .recommend-content > div {
+  margin-top: 16px
+}
+.bc-markdown .recommend-bottom-drawer .recommend-content > p {
+  font-size: 16px;
+  color: var(--gray-color-3);
+  text-align: left;
+  font-weight: 400
+}
+.bc-markdown .recommend-bottom-drawer .recommend-content ul {
+  display: block
+}
+.bc-markdown .recommend-bottom-drawer .recommend-content ul li {
+  text-align: left
+}
+.bc-markdown .recommend-bottom-drawer .recommend-content ul li .title {
+  font-size: 14px
+}
+.bc-markdown .recommend-bottom-drawer .recommend-content ul li .category {
+  display: none
+}
+.bc-markdown .recommend-bottom-drawer .recommend-content ul li .date {
+  font-size: 10px
+}
+.bc-markdown .recommend-bottom-drawer .recommend-content ul li img {
+  width: 64px;
+  height: 64px
+}
+.bc-markdown .recommend-bottom-drawer .another-content h4 {
+  font-size: 16px;
+  text-align: left;
+  font-weight: 400
+}
+.bc-markdown .recommend-bottom-drawer .another-content h4 a {
+  font-weight: 700;
+  color: var(--primary-color)
+}
+.bc-markdown .recommend-bottom-drawer .another-content table {
+  margin-top: 12px;
+  width: 100%
+}
+.bc-markdown .recommend-bottom-drawer .another-content table td {
+  display: none
+}
+.bc-markdown .recommend-bottom-drawer .another-content table th {
+  text-align: left
+}
+.bc-markdown .recommend-bottom-drawer .another-content table th a {
+  color: var(--gray-color-3);
+  font-size: 14px
+}
+.bc-markdown .recommend-bottom-drawer .another-content table th span {
+  font-size: 11px;
+  color: var(--gray-color-5)
+}
 .bc-sidebar {
   font-size: 14px;
   margin-bottom: 20px
@@ -517,6 +674,69 @@ img:not([src]):not([srcset]) {
     flex: 1;
     padding: 20px 0 20px 20px
   }
+}
+.donation.active .panel {
+  transform: translate(-50%,-100px)
+}
+@media only all and (min-width:768px) {
+  .donation.active .panel {
+    transform: translate(-50%,-52px)
+  }
+}
+.donation .panel {
+  position: fixed;
+  overflow-y: auto;
+  transition: transform .2s ease-in-out;
+  left: 50%;
+  transform: translate(-50%,100%);
+  bottom: 0;
+  background: #fff;
+  min-width: 340px;
+  z-index: 300;
+  border-radius: 12px;
+  padding: 20px 40px;
+  box-shadow: 0 1px 8px 0 rgba(0,0,0,.2)
+}
+.donation .panel__inner {
+  position: relative
+}
+.donation .panel__inner div {
+  display: flex;
+  justify-content: center
+}
+.donation .title {
+  text-align: center;
+  font-size: 14px;
+  color: var(--gray-color-3);
+  margin-bottom: 20px
+}
+.donation .desc {
+  text-align: center;
+  font-size: 12px;
+  color: var(--gray-color-5);
+  margin-top: 20px
+}
+.donation .desc b {
+  font-weight: 700;
+  text-decoration: underline;
+  margin-left: 3px
+}
+.donation a {
+  text-align: center;
+  margin-right: 32px
+}
+.donation a:last-child {
+  margin-right: 0
+}
+.donation a img {
+  width: 34px;
+  margin: 0 auto
+}
+.donation a span {
+  display: block;
+  font-size: 10px;
+  text-align: center;
+  word-break: break-word
 }
 .container > .inner {
   max-width: 1280px;
@@ -955,6 +1175,17 @@ ul.tags li {
 }
 .bc-sidebar {
   overflow-x: hidden
+}
+body.sticky main {
+  overflow: initial
+}
+body.sticky main .sidebar-holder {
+  position: sticky;
+  top: 85px;
+  transition: .25s all ease-in-out
+}
+body.sticky.visible-lnb main .sidebar-holder {
+  top: 140px
 }
 main {
   overflow: hidden;

@@ -72,6 +72,13 @@
             <type>BOOL</type>
             <default>true</default>
          </variable>                    
+         <variable>
+            <name>active-sidebar-sticky</name>
+            <label>사이드바 고정</label>
+            <description></description>
+            <type>BOOL</type>
+            <default>true</default>
+         </variable>                    
       </variablegroup>
       <variablegroup name="폰트">        
          <variable>
