@@ -42,12 +42,27 @@
             // 초기렌더링 퍼프먼스 향상을 위해
             // 모바일에서 사이드바 제거          
             if (document.querySelector('.sidebar-holder')) {
-              document.querySelector('.sidebar-holder').remove();
+              document.querySelector('.sidebar-holder').style.display = 'none';
             }
           }
         })();
       </script>
     </s_if_var_disable-sidebar>
+    <s_if_var_active-header-searchbar>
+      <script>
+        (function() {
+          window.addEventListener('load', function() {
+            var el = document.querySelector('#side-menu .search').cloneNode(true);
+            el.querySelector('.search-input').setAttribute('name', 'header-search');
+            document.querySelector('.right-side .search-holder').appendChild(el);
+            document.querySelector('.right-side .search-holder form').addEventListener('submit', function(e) {
+              e.preventDefault();
+              window.location.href = '/search/' + looseURIEncode(document.getElementsByName('header-search')[0].value);
+            });
+          });
+        })();
+      </script>
+    </s_if_var_active-header-searchbar>
     <link rel="preconnect" href="//cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="preconnect" href="//fonts.googleapis.com/earlyaccess/notosanskr.css">
     <link rel="preconnect" href="https://blog.kakaocdn.net">
@@ -97,7 +112,9 @@
                       <s_not_var_logo-image>[##_title_##]</s_not_var_logo-image>
                     </a></h1>
                 </div>
-                <div class="right-side"><a class="menu-opener"><img src="./images/menu_icon.svg" alt="menu-opener icon"></a></div>
+                <div class="right-side">
+                  <div class="search-holder"></div><a class="menu-opener"><img src="./images/menu_icon.svg" alt="menu-opener icon"></a>
+                </div>
               </div>
             </div>
           </header>
@@ -255,7 +272,7 @@
                       <div class="dim"></div>
                       <div class="panel"></div>
                     </div>
-                    <div class="bc-markdown__bottm-navigator">
+                    <div class="bc-markdown__bottom-navigator">
                       <ul>
                         <li class="menu"><a class="menu-btn" href="javascript:;" data-bottom-navigator-item="menu"><img src="./images/bottom_menu_icon.svg" alt="bottom menu icon">
                             <p>목차</p>
@@ -266,8 +283,15 @@
                         <li class="like">
                           <div class="like-btn-holder"><button class="like-btn"></button></div>
                         </li>
-                        <li class="home"><img src="./images/shelf_icon.svg" alt="shelf icon">
-                          <p>추천글</p>
+                        <li class="recommend"><a class="recommend-btn" href="javascript:;"><img src="./images/shelf_icon.svg" alt="shelf icon">
+                            <p>추천글</p>
+                          </a>
+                          <div class="recommend-bottom-drawer">
+                            <div class="dim"></div>
+                            <div class="panel">
+                              <div class="panel__inner"></div>
+                            </div>
+                          </div>
                         </li>
                         <li class="explore"><a class="search-btn" href="javascript:;"><img src="./images/explore_icon.svg" alt="explore icon">
                             <p>탐색</p>
@@ -358,7 +382,7 @@
                           <ul>
                             <s_guest_rep>
                               <li class="comment-item" id="[##_guest_rep_id_##]">
-                                <div class="author-meta"><img class="avatar" src="//t1.daumcdn.net/tistory_admin/static/skin/avatar_default.gif" alt="">
+                                <div class="author-meta"><img class="avatar" src="[##_guest_rep_logo_##]" alt="">
                                   <div class="info"><span class="name">[##_guest_rep_name_##]</span><span class="date">[##_guest_rep_date_##]</span></div>
                                 </div>
                                 <p>[##_guest_rep_desc_##]</p>
@@ -368,7 +392,7 @@
                                     <ul>
                                       <s_guest_reply_rep>
                                         <li id="[##_guest_rep_id_##]">
-                                          <div class="author-meta"><img class="avatar" src="//t1.daumcdn.net/tistory_admin/static/skin/avatar_default.gif" alt="">
+                                          <div class="author-meta"><img class="avatar" src="[##_guest_rep_logo_##]" alt="">
                                             <div class="info"><span class="name">[##_guest_rep_name_##]</span><span class="date">[##_guest_rep_date_##]</span></div>
                                           </div>
                                           <p>[##_guest_rep_desc_##]</p>
@@ -520,7 +544,7 @@
                 </s_if_var_enabled-profile>
                 <s_search>
                   <div class="search">
-                    <form onsubmit="[##_search_onclick_submit_##]"><input class="search-input" type="text" name="[##_search_name_##]" value="[##_search_text_##]" onkeypress="if (event.keyCode == 13) { [##_search_onclick_submit_##] }" placeholder="검색어를 입력해 주세요."><button type="submit" onclick="[##_search_onclick_submit_##]"></button></form>
+                    <form onsubmit="[##_search_onclick_submit_##]"><input class="search-input" type="text" name="[##_search_name_##]" value="[##_search_text_##]" placeholder="검색어를 입력해 주세요."><button type="submit"></button></form>
                   </div>
                 </s_search>
                 <div class="category-list">[##_category_list_##]</div>
@@ -547,7 +571,7 @@
         </div>
       </div>
     </s_t3>
-    <script type="text/javascript" src="./images/app.1d54e4c010b3c8a52906.js"></script>
+    <script type="text/javascript" src="./images/app.577c0362161dcf3a1571.js"></script>
     <script>
       (function() {
         window.onload = function() {
@@ -589,6 +613,6 @@
         })();
       </script>
     </s_if_var_enabled-custom-ads>
-    <script type="text/javascript" src="./images/script.CanLnqn1k5Jlaxb383Lv.js"></script>
+    <script type="text/javascript" src="./images/script.L4G7WPcEQmmHgApp90U7.js"></script>
   </body>
 </html>
